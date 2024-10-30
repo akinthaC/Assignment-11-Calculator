@@ -18,9 +18,15 @@ $(document).ready(function() {
             } catch (error) {
                 display.val("Error");
             }
-        }
 
-        else {
+        } else if (buttonText === '%') {
+            try {
+                display.val(eval(display.val()) / 100);
+            } catch (error) {
+                display.val("Error");
+            }
+
+        }else {
             display.val(display.val() + buttonText);
         }
 
